@@ -1,6 +1,6 @@
 ;;;; package.lisp
 
-(defpackage #:learning-statistics-in-lisp
+(defpackage #:optioignons
   (:use #:cl))
 
 (defpackage #:pca

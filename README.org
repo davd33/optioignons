@@ -1,0 +1,13 @@
+This project aims to implement simple statistical tools for people
+learning statistics.
+
+* PCA - Principal Component Analysis
+
+The PCA analyses rectangular data tables with individuals as lines and
+quantitative variables as columns.
+
+A table as 1..K variables and 1..I individuals.
+
+For a variable =k=, we note:
+ - mean: x_k = (* (/ 1 I) (sum 1..I x
+ - standard deviation: s_k = sqrt((1/I) * sum(squared(1..I)(x_ik - ~x_k)))

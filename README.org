@@ -6,8 +6,22 @@ learning statistics.
 The PCA analyses rectangular data tables with individuals as lines and
 quantitative variables as columns.
 
-A table as 1..K variables and 1..I individuals.
+A table has 1..K variables and 1..I individuals.
 
-For a variable =k=, we note:
- - mean: x_k = (* (/ 1 I) (sum 1..I x
- - standard deviation: s_k = sqrt((1/I) * sum(squared(1..I)(x_ik - ~x_k)))
+For a variable =k=, we note the mean ([[fig:pca-mean]]) and the standard deviation ([[fig:std-dev]]).
+
+#+CAPTION: the mean
+#+NAME: fig:pca-mean
+[[./img/mean.png]]
+
+#+CAPTION:
+#+NAME: fig:std-dev
+[[./img/standard-deviation.png]]
+
+It is possible to see the table in two different ways: as a set of lines, or as a set of columns.
+For individuals (lines), we aim to understand when individuals are similar given the whole set of variables.
+For variables (columns), we want to understand similarities between variables (bonds). 
+These can be measured via the correlation coefficient: two variables having a high correlation (near 1) will be variables that contain the same information.
+The PCA allows to find good indicators that summarize one or several variables.
+
+The study of individuals and the one of variables are related:

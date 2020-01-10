@@ -6,6 +6,8 @@ learning statistics.
 The PCA analyses rectangular data tables with individuals as lines and
 quantitative variables as columns.
 
+The PCA is an exploratory/descriptive method.
+
 A table has 1..K variables and 1..I individuals.
 
 For a variable =k=, we note the mean ([[fig:pca-mean]]) and the standard deviation ([[fig:std-dev]]).
@@ -25,3 +27,23 @@ These can be measured via the correlation coefficient: two variables having a hi
 The PCA allows to find good indicators that summarize one or several variables.
 
 The study of individuals and the one of variables are related:
+ - we can classify individuals from variables
+ - it is possible to depict variable's bonds with specific individuals (e.g. tall people are heavy whereas small ones are light).
+
+** Visualize individuals
+
+For K dimensions, it's not always possible to visualize individuals 'clouds':
+
+ - K = 1: one axis
+ - K = 2: 2D graph
+ - K = 3: 3D graph
+ - K >= 4: not possible.
+
+If K >= 4, in order to find a visualization, we wanna know how to measure similarities between individuals.
+Two individuals are similar when they take similar values on the set of K variables.
+
+#+CAPTION: the similarity between two individuals
+#+NAME: fig:pca-similarity
+[[./img/similarity.png]]
+
+The shape of the cloud will inform us about individuals' relations.

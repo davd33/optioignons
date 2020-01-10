@@ -4,7 +4,7 @@
   (:use #:cl))
 
 (defpackage #:pca
-  (:use #:cl))
+  (:use #:cl #:sxql))
 
 (defpackage #:util
   (:use #:cl))

@@ -3,6 +3,8 @@ learning statistics.
 
 * PCA - Principal Component Analysis
 
+Theses are some notes taken from the video of François Husson at [[https://www.youtube.com/watch?v=8qw0bNfK4H0][https://www.youtube.com/watch?v=8qw0bNfK4H0]].
+
 The PCA analyses rectangular data tables with individuals as lines and
 quantitative variables as columns.
 
@@ -47,3 +49,90 @@ Two individuals are similar when they take similar values on the set of K variab
 [[./img/similarity.png]]
 
 The shape of the cloud will inform us about individuals' relations.
+
+Like a pic of a bird swarm enables us to imagine the 3D shape of it, the cloud of K variables of I individuals made during PCA will enable us to imagine its actual KD shape!
+
+** Pre-processing data
+
+After centering+reduction, the data is left without units.
+
+*** Centering
+
+Translation of the data cloud.
+
+*** Reduction
+
+Whether we should reduce or not depends on when we have variables in several units.
+
+Without reduction, variables that have a greater variability will have a bigger influence.
+The importance of a variable is proportional to its standard deviation.
+
+#+CAPTION: influence of variables
+#+NAME: fig:pca-influence-variables
+[[./img/variable-influence.png]]
+
+
+** Intuition
+
+The intuition tells us that in order to choose from all the possible cloud configurations (data projections), we should summarize the data by choosing the one that increases distances between every points.
+
+** Image quality
+
+In order to know the quality of a image (or projection of the data cloud), we use the dispersion (variability).
+
+#+CAPTION: Which animal? (Image from JP Fénelon)
+#+NAME: fig:camel
+[[./img/camel.png]]
+
+** How to find the best image of the data cloud
+
+*** First axis
+
+Find the first axis or first factor that distort the least the data cloud.
+
+#+CAPTION: 
+#+NAME: fig:pca-first-factor
+[[./img/first-factor.png]]
+
+$H_i$, the projection of individual $i$ on an axis.
+$O$ the gravity center of the cloud.
+
+$(iH_i)^2$ is the distance between the individual $i$ and its projection on an axis.
+We aim to minimize the latter distance.
+
+$(iH_i)^2$ is small when $(OH_i)^2$ is great.
+
+*We want to maximize $\sum_i(OH_i)^2$.*
+
+*** Best plan
+
+Maximize $\sum_i(OH_i)^2$ with $H_i \in plan$.
+The best plan entails the best axis. In order to find it, we first search for the best axis and then search for an other axis $u_2 \perp u_2$ (perpendicular to the first) that maximizes $\sum_i(OH_i)^2$. 
+
+We repeat the same process in order to find new axis, orthogonal to the last one and maximizing the distance.
+
+** Visualize Variables
+
+Reminder: a variable is a point in a $I$ dimensions space.
+
+For two variables $k$ and $l$:
+
+\begin{equation}
+\cos(\theta _{kl})
+=
+\frac
+  {< X_{.k},X_{.l} >}
+  {\parallel X_{.k} \parallel \parallel X_{.l} \parallel} \\
+=
+\frac
+  {\sum_{i=1}^{I} X_{ik} X_{il}}
+  {
+    \sqrt{\sum_{i=1}^{I}X_{ik}^2}
+    \sqrt{\sum_{i=1}^{I}X_{il}^2}
+  } \\
+=
+r(X_{.k},X_{.l})
+\end{equation}
+
+with $r$, the correlation coefficient (only because data is centered).
+

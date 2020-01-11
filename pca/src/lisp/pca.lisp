@@ -48,6 +48,13 @@
 
 (defun pca ())
 
+(defun re-mean (old-mean new-elt n)
+  "Updates the value of the mean of a set of elements taking into account
+the new element, given the current number of elements n."
+  (+ old-mean
+     (* (/ 1 (1+ n))
+        (- new-elt old-mean))))
+
 (defun similarity (ind1 ind2 variables)
   "Computes Pythagore similarity between two PCA objects.
 Variables are a list of symbols, as accessor of PCA objects."

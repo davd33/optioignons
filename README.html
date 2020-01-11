@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-01-11 sam. 13:57 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="davd" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org7e5f77f">1. PCA - Principal Component Analysis</a>
+<ul>
+<li><a href="#orgbf1c12c">1.1. Visualize individuals</a></li>
+<li><a href="#org3f8a1aa">1.2. Pre-processing data</a>
+<ul>
+<li><a href="#org3a03d9c">1.2.1. Centering</a></li>
+<li><a href="#org01db480">1.2.2. Reduction</a></li>
+</ul>
+</li>
+<li><a href="#orgf78c1f0">1.3. Intuition</a></li>
+<li><a href="#orgfaaff21">1.4. Image quality</a></li>
+<li><a href="#orge9fcc03">1.5. How to find the best image of the data cloud</a>
+<ul>
+<li><a href="#orgaf1b2e9">1.5.1. First axis</a></li>
+<li><a href="#org6d4e731">1.5.2. Best plan</a></li>
+</ul>
+</li>
+<li><a href="#org948d4d7">1.6. Visualize Variables</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+This project aims to implement simple statistical tools for people
+learning statistics.
+</p>
+
+<div id="outline-container-org7e5f77f" class="outline-2">
+<h2 id="org7e5f77f"><span class="section-number-2">1</span> PCA - Principal Component Analysis</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Theses are some notes taken from the video of François Husson at <a href="https://www.youtube.com/watch?v=8qw0bNfK4H0">https://www.youtube.com/watch?v=8qw0bNfK4H0</a>.
+</p>
+
+<p>
+The PCA analyses rectangular data tables with individuals as lines and
+quantitative variables as columns.
+</p>
+
+<p>
+The PCA is an exploratory/descriptive method.
+</p>
+
+<p>
+A table has 1..K variables and 1..I individuals.
+</p>
+
+<p>
+For a variable <code>k</code>, we note the mean (<a href="#org428479b">1</a>) and the standard deviation (<a href="#org02d73eb">2</a>).
+</p>
+
+
+<div id="org428479b" class="figure">
+<p><img src="./img/mean.png" alt="mean.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>the mean</p>
+</div>
+
+
+<div id="org02d73eb" class="figure">
+<p><img src="./img/standard-deviation.png" alt="standard-deviation.png" />
+</p>
+</div>
+
+<p>
+It is possible to see the table in two different ways: as a set of lines, or as a set of columns.
+For individuals (lines), we aim to understand when individuals are similar given the whole set of variables.
+For variables (columns), we want to understand similarities between variables (bonds). 
+These can be measured via the correlation coefficient: two variables having a high correlation (near 1) will be variables that contain the same information.
+The PCA allows to find good indicators that summarize one or several variables.
+</p>
+
+<p>
+The study of individuals and the one of variables are related:
+</p>
+<ul class="org-ul">
+<li>we can classify individuals from variables</li>
+<li>it is possible to depict variable's bonds with specific individuals (e.g. tall people are heavy whereas small ones are light).</li>
+</ul>
+</div>
+
+<div id="outline-container-orgbf1c12c" class="outline-3">
+<h3 id="orgbf1c12c"><span class="section-number-3">1.1</span> Visualize individuals</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+For K dimensions, it's not always possible to visualize individuals 'clouds':
+</p>
+
+<ul class="org-ul">
+<li>K = 1: one axis</li>
+<li>K = 2: 2D graph</li>
+<li>K = 3: 3D graph</li>
+<li>K &gt;= 4: not possible.</li>
+</ul>
+
+<p>
+If K &gt;= 4, in order to find a visualization, we wanna know how to measure similarities between individuals.
+Two individuals are similar when they take similar values on the set of K variables.
+</p>
+
+
+<div id="org7c6af0a" class="figure">
+<p><img src="./img/similarity.png" alt="similarity.png" />
+</p>
+<p><span class="figure-number">Figure 3: </span>the similarity between two individuals</p>
+</div>
+
+<p>
+The shape of the cloud will inform us about individuals' relations.
+</p>
+
+<p>
+Like a pic of a bird swarm enables us to imagine the 3D shape of it, the cloud of K variables of I individuals made during PCA will enable us to imagine its actual KD shape!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3f8a1aa" class="outline-3">
+<h3 id="org3f8a1aa"><span class="section-number-3">1.2</span> Pre-processing data</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+After centering+reduction, the data is left without units.
+</p>
+</div>
+
+<div id="outline-container-org3a03d9c" class="outline-4">
+<h4 id="org3a03d9c"><span class="section-number-4">1.2.1</span> Centering</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+Translation of the data cloud.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org01db480" class="outline-4">
+<h4 id="org01db480"><span class="section-number-4">1.2.2</span> Reduction</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+Whether we should reduce or not depends on when we have variables in several units.
+</p>
+
+<p>
+Without reduction, variables that have a greater variability will have a bigger influence.
+The importance of a variable is proportional to its standard deviation.
+</p>
+
+
+<div id="org652c5c7" class="figure">
+<p><img src="./img/variable-influence.png" alt="variable-influence.png" />
+</p>
+<p><span class="figure-number">Figure 4: </span>influence of variables</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgf78c1f0" class="outline-3">
+<h3 id="orgf78c1f0"><span class="section-number-3">1.3</span> Intuition</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+The intuition tells us that in order to choose from all the possible cloud configurations (data projections), we should summarize the data by choosing the one that increases distances between every points.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfaaff21" class="outline-3">
+<h3 id="orgfaaff21"><span class="section-number-3">1.4</span> Image quality</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+In order to know the quality of a image (or projection of the data cloud), we use the dispersion (variability).
+</p>
+
+
+<div id="org3dd1ca4" class="figure">
+<p><img src="./img/camel.png" alt="camel.png" />
+</p>
+<p><span class="figure-number">Figure 5: </span>Which animal? (Image from JP Fénelon)</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge9fcc03" class="outline-3">
+<h3 id="orge9fcc03"><span class="section-number-3">1.5</span> How to find the best image of the data cloud</h3>
+<div class="outline-text-3" id="text-1-5">
+</div>
+<div id="outline-container-orgaf1b2e9" class="outline-4">
+<h4 id="orgaf1b2e9"><span class="section-number-4">1.5.1</span> First axis</h4>
+<div class="outline-text-4" id="text-1-5-1">
+<p>
+Find the first axis or first factor that distort the least the data cloud.
+</p>
+
+
+<div id="orgdcc23c0" class="figure">
+<p><img src="./img/first-factor.png" alt="first-factor.png" />
+</p>
+</div>
+
+<p>
+\(H_i\), the projection of individual \(i\) on an axis.
+\(O\) the gravity center of the cloud.
+</p>
+
+<p>
+\((iH_i)^2\) is the distance between the individual \(i\) and its projection on an axis.
+We aim to minimize the latter distance.
+</p>
+
+<p>
+\((iH_i)^2\) is small when \((OH_i)^2\) is great.
+</p>
+
+<p>
+<b>We want to maximize \(\sum_i(OH_i)^2\).</b>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d4e731" class="outline-4">
+<h4 id="org6d4e731"><span class="section-number-4">1.5.2</span> Best plan</h4>
+<div class="outline-text-4" id="text-1-5-2">
+<p>
+Maximize \(\sum_i(OH_i)^2\) with \(H_i \in plan\).
+The best plan entails the best axis. In order to find it, we first search for the best axis and then search for an other axis \(u_2 \perp u_2\) (perpendicular to the first) that maximizes \(\sum_i(OH_i)^2\). 
+</p>
+
+<p>
+We repeat the same process in order to find new axis, orthogonal to the last one and maximizing the distance.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org948d4d7" class="outline-3">
+<h3 id="org948d4d7"><span class="section-number-3">1.6</span> Visualize Variables</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+Reminder: a variable is a point in a \(I\) dimensions space.
+</p>
+
+<p>
+For two variables \(k\) and \(l\):
+</p>
+
+\begin{equation}
+\cos(\theta _{kl})
+=
+\frac
+  {< X_{.k},X_{.l} >}
+  {\parallel X_{.k} \parallel \parallel X_{.l} \parallel} \\
+=
+\frac
+  {\sum_{i=1}^{I} X_{ik} X_{il}}
+  {
+    \sqrt{\sum_{i=1}^{I}X_{ik}^2}
+    \sqrt{\sum_{i=1}^{I}X_{il}^2}
+  } \\
+=
+r(X_{.k},X_{.l})
+\end{equation}
+
+<p>
+with \(r\), the correlation coefficient (only because data is centered).
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: davd</p>
+<p class="date">Created: 2020-01-11 sam. 13:57</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

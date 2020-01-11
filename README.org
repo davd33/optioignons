@@ -118,21 +118,36 @@ Reminder: a variable is a point in a $I$ dimensions space.
 For two variables $k$ and $l$:
 
 \begin{equation}
+\begin{split}
 \cos(\theta _{kl})
-=
+& =
 \frac
-  {< X_{.k},X_{.l} >}
-  {\parallel X_{.k} \parallel \parallel X_{.l} \parallel} \\
-=
+  {< x_{.k},x_{.l} >}
+  {\parallel x_{.k} \parallel \parallel x_{.l} \parallel} \\
+& =
 \frac
-  {\sum_{i=1}^{I} X_{ik} X_{il}}
+  {\sum_{i=1}^{I} x_{ik} x_{il}}
   {
-    \sqrt{\sum_{i=1}^{I}X_{ik}^2}
-    \sqrt{\sum_{i=1}^{I}X_{il}^2}
+    \sqrt{\sum_{i=1}^{I}x_{ik}^2}
+    \sqrt{\sum_{i=1}^{I}x_{il}^2}
   } \\
-=
-r(X_{.k},X_{.l})
+& =
+r(x_{.k},x_{.l})
+\end{split}
 \end{equation}
 
 with $r$, the correlation coefficient (only because data is centered).
+
+** How to visualize the cloud of variables
+
+Like for individuals: research orthogonal axis:
+
+\begin{equation}
+arg max \sum _{k=1} ^{K} r(v_1,x_{.k})^2
+\end{equation}
+
+with $v1 \in \mathbb{R} ^{\prime}$, and $v1$ being a synthetic variable summarizing at best all the variables.
+
+Once $v1$ is found, find other orthogonal axis (the second, the third...).
+
 
